@@ -2,53 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Claudio Costanzo – Academic Homepage</title>
+  <title>Dr. Your Name – Academic Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal academic webpage of Claudio Costanzo, PhD candidate at ECARES, ULB.">
+  <meta name="description" content="Personal academic webpage of Dr. Your Name.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #0066cc;
-      --text:   #333;
-      --bg:     #fff;
-      --light:  #f8f8f8;
+      --text: #333333;
+      --bg: #ffffff;
+      --light: #f8f8f8;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-    body         { background: var(--bg); color: var(--text); line-height: 1.6; }
-    header       { background: var(--light); border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
-    .container   { width: 90%; max-width: 1000px; margin: auto; padding: 1rem 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-    nav          { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    nav a.logo   { font-size: 1.25rem; font-weight: 700; color: var(--text); text-decoration: none; }
-    nav ul       { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
-    nav ul li a  { color: var(--text); text-decoration: none; font-weight: 600; transition: color .2s ease; }
-    nav ul li a:hover, nav ul li a:focus { color: var(--accent); }
+    header {
+      background: var(--light);
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    section { padding: 4rem 0; }
-    h1, h2  { margin-bottom: 1rem; font-weight: 700; }
-    h1      { font-size: 2rem; }
-    h2      { font-size: 1.5rem; color: var(--accent); }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem 0;
+    }
 
-    .about-wrapper  { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
-    .about-img      { max-width: 180px; border-radius: 50%; flex: 0 0 180px; }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-    .pub-item, .teach-item { margin-bottom: 1.25rem; }
-    .pub-title   { font-weight: 600; }
-    .pub-authors, .pub-venue { font-size: .9rem; color: #555; }
+    nav a.logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
 
-    footer { background: var(--light); padding: 2rem 0; text-align: center; font-size: .9rem; color: #666; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-    /* LinkedIn icon */
-    .social-icon { width: 24px; height: 24px; fill: var(--text); transition: fill .2s ease; }
-    a:hover .social-icon { fill: var(--accent); }
+    nav ul li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-content {
+      flex: 1 1 60%;
+    }
+
+    .about-img {
+      max-width: 180px;
+      border-radius: 50%;
+      flex: 0 0 180px;
+    }
+
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .pub-item, .teach-item {
+      margin-bottom: 1.25rem;
+    }
+
+    .pub-item span {
+      display: block;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-authors,
+    .pub-venue {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      background: var(--light);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
 
     @media (max-width: 600px) {
-      .about-wrapper { flex-direction: column; align-items: flex-start; }
-      nav ul         { flex-basis: 100%; justify-content: flex-start; }
+      .about-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-basis: 100%;
+        justify-content: flex-start;
+      }
     }
-  </style>
+
+  .social-icon { width: 24px; height: 24px; fill: var(--text); transition: fill 0.2s ease; }
+a:hover .social-icon { fill: var(--accent); }
+</style>
 </head>
 <body>
 
@@ -58,6 +166,7 @@
       <a href="#top" class="logo">Claudio Costanzo</a>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#teaching">Teaching</a></li>
@@ -70,9 +179,9 @@
 <main id="top">
   <!-- About Section -->
   <section id="about">
-    <div class="container">
+    <div class="container about">
       <div class="about-wrapper">
-        <img src="assets/profile.jpg" alt="Claudio Costanzo" class="about-img">
+        <img src="assets/profile.jpg" alt="Profile picture" class="about-img">
         <div class="about-content">
           <h1>Claudio Costanzo</h1>
           <p>PhD candidate at <a href="https://ecares.ulb.be/">ECARES</a>, Université libre de Bruxelles.</p>
@@ -81,7 +190,16 @@
     </div>
   </section>
 
-  <!-- Research-Interests Section -->
+  <!-- Research Section -->
+    <!-- CV Section -->
+  <section id="cv">
+    <div class="container">
+      <h2>Curriculum Vitae</h2>
+      <p>You can download my latest CV as a PDF:</p>
+      <p><a href="assets/Claudio_Costanzo_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+    </div>
+  </section>
+
   <section id="research">
     <div class="container">
       <h2>Research Interests</h2>
@@ -96,46 +214,39 @@
   <section id="publications">
     <div class="container">
       <h2>Research</h2>
-
       <div class="pub-item">
         <span class="pub-title">Robots, jobs, and optimal fertility timing</span>
         <span class="pub-authors">Claudio Costanzo (2025)</span>
         <span class="pub-venue">Journal of Population Economics, 38</span>
         <span><a href="https://doi.org/10.1007/s00148-025-01105-3">DOI</a></span>
       </div>
-
     </div>
   </section>
 
   <!-- Teaching Section -->
+    <!-- Teaching Section -->
   <section id="teaching">
     <div class="container">
       <h2>Teaching</h2>
       <div class="teach-item">
-        <strong>Graduate Econometrics II</strong> (2021 – 2024)
+        <strong>Graduate Econometrics II</strong> (2021&nbsp;–&nbsp;2024)
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+    <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:claudio.costanzo@ulb.be">claudio.costanzo@ulb.be</a></p>
-      <p>Links:
-        <a href="https://be.linkedin.com/in/claudio-costanzo-353939100/en" aria-label="LinkedIn">
-          <svg class="social-icon" role="img" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554V14.89c0-1.327-.027-3.037-1.851-3.037-1.851 0-2.135 1.445-2.135 2.94v5.659H9.353V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.372-1.85 3.605 0 4.272 2.372 4.272 5.455v6.286zM5.337 7.433c-1.144 0-2.067-.927-2.067-2.068 0-1.142.923-2.067 2.067-2.067s2.067.925 2.067 2.067c0 1.141-.923 2.068-2.067 2.068zM6.756 20.452H3.919V9h2.837v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.73v20.541C0 23.226.792 24 1.771 24h20.451C23.198 24 24 23.226 24 22.271V1.729C24 .774 23.198 0 22.225 0z"/>
-          </svg>
-        </a>
-      </p>
+      <p>Links: <a href="https://be.linkedin.com/in/claudio-costanzo-353939100/en" aria-label="LinkedIn"><svg class="social-icon" role="img" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554V14.89c0-1.327-.027-3.037-1.851-3.037-1.851 0-2.135 1.445-2.135 2.94v5.659H9.353V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.372-1.85 3.605 0 4.272 2.372 4.272 5.455v6.286zM5.337 7.433c-1.144 0-2.067-.927-2.067-2.068 0-1.142.923-2.067 2.067-2.067s2.067.925 2.067 2.067c0 1.141-.923 2.068-2.067 2.068zM6.756 20.452H3.919V9h2.837v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.73v20.541C0 23.226.792 24 1.771 24h20.451C23.198 24 24 23.226 24 22.271V1.729C24 .774 23.198 0 22.225 0z"/></svg></a></p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="container">
-    © 2025 Claudio Costanzo. Hosted on GitHub Pages.
+    © 2025 Your Name. This website was built with pure HTML/CSS and hosted on GitHub Pages.
   </div>
 </footer>
 
