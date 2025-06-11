@@ -1,5 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head><meta charset="utf-8"><title>My site</title></head>
-  <body><h1>Hello world from GitHub Pages!</h1></body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudio Costanzo – PhD Candidate</title>
+  <style>
+    /* ---------- Basic Reset & Typography ---------- */
+    *,*::before,*::after{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#222;background:#fff;}
+
+    /* ---------- Sticky Navigation ---------- */
+    header{position:sticky;top:0;z-index:100;background:#f8f9fa;border-bottom:1px solid #e5e5e5;}
+    nav{max-width:960px;margin:auto;padding:0.75rem 1rem;}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;}
+    nav a{text-decoration:none;color:#0057b8;font-weight:600;}
+    nav a:hover,nav a:focus{color:#d63384;}
+
+    /* ---------- Layout ---------- */
+    main{max-width:960px;padding:2rem 1rem;margin:auto;}
+    section{scroll-margin-top:4rem;}
+    h2{margin-top:0.5rem;border-bottom:2px solid #0057b8;padding-bottom:0.3rem;}
+
+    footer{text-align:center;font-size:0.9rem;color:#666;margin:4rem 0 2rem;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#research">Research</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Info Section ========== -->
+    <section id="info">
+      <h2>Info</h2>
+      <p><strong>Claudio Costanzo</strong> is a PhD candidate in <em>[Your Department]</em> at <em>[Your University]</em>. His research interests include&nbsp;…</p>
+      <p>Email: <a href="mailto:your.email@university.edu">your.email@university.edu</a> &nbsp;|&nbsp; <a href="https://scholar.google.com/">Google Scholar</a></p>
+    </section>
+
+    <!-- ========== CV Section ========== -->
+    <section id="cv">
+      <h2>CV</h2>
+      <p>You can download my full CV as a PDF&nbsp;<a href="CV_ClaudioCostanzo.pdf" target="_blank" rel="noopener">here</a>.</p>
+      <ul>
+        <li><strong>Education</strong>: MSc, BSc in …</li>
+        <li><strong>Awards</strong>: …</li>
+      </ul>
+    </section>
+
+    <!-- ========== Teaching Section ========== -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p>I have served as a teaching assistant / lecturer for the following courses:</p>
+      <ul>
+        <li>Course 1 – University, Year</li>
+        <li>Course 2 – University, Year</li>
+      </ul>
+    </section>
+
+    <!-- ========== Research Section ========== -->
+    <section id="research">
+      <h2>Research</h2>
+      <p>My research explores … Below is a selection of current projects and publications.</p>
+      <h3>Selected Publications</h3>
+      <ol>
+        <li>Author names (2024), <em>Paper Title</em>, <strong>Conference/Journal</strong>.</li>
+        <li>Author names (2023), <em>Paper Title</em>, <strong>Conference/Journal</strong>.</li>
+      </ol>
+      <h3>Projects</h3>
+      <ul>
+        <li><strong>Project A</strong> – short description…</li>
+        <li><strong>Project B</strong> – short description…</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Claudio Costanzo &middot; Last updated: 11&nbsp;June&nbsp;2025</p>
+  </footer>
+
+</body>
 </html>
