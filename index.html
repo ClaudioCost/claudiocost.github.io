@@ -236,7 +236,7 @@
     <div class="container">
       <h2>Research</h2>
 
-      <h3>Peer‑reviewed</h3>
+      <h3>Peer-reviewed</h3>
       <div class="pub-item">
         <span class="pub-title">Robots, jobs, and optimal fertility timing</span>
         <span class="pub-authors">Claudio Costanzo (2025)</span>
@@ -244,7 +244,7 @@
         <span>
           <a href="assets/Robots__Jobs__and_Optimal_Fertility_Timing.pdf" target="_blank" rel="noopener">PDF</a> |
           <a href="https://doi.org/10.1007/s00148-025-01105-3" target="_blank" rel="noopener">DOI</a> |
-          <a href="#" class="bibtex-link" data-bibtex="@article{costanzo_jope_rjoft,\nauthor = {Costanzo, Claudio},\nyear = {2025},\nmonth = {06},\npages   = {51},\ntitle = {Robots, jobs, and optimal fertility timing},\nvolume = {38},\njournal = {Journal of Population Economics},\ndoi = {10.1007/s00148-025-01105-3}\n}">Bibtex</a>
+          <a href="#" id="bibtex-link">Bibtex</a>
         </span>
       </div>
 
@@ -264,7 +264,7 @@
     <div class="container">
       <h2>Teaching</h2>
       <div class="teach-item">
-        <strong>TA Graduate Econometrics II</strong>, ULB (2021 – 2025)
+        <strong>TA Graduate Econometrics II</strong>, ULB (2021 – 2025)
       </div>
     </div>
   </section>
@@ -285,49 +285,4 @@
       Links:
       <a href="https://be.linkedin.com/in/claudio-costanzo-353939100/en" aria-label="LinkedIn">
         <svg class="social-icon" role="img" viewBox="0 0 24 24">…</svg>
-      </a>
-    </p>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="container">
-    © 2025 Claudio Costanzo. This website was built with HTML/CSS and hosted on GitHub Pages.
-  </div>
-</footer>
-
-<!-- Modal Structure -->
-<div id="bibtex-modal" class="modal">
-  <div class="modal-content">
-    <button id="modal-close" class="modal-close" aria-label="Close modal">&times;</button>
-    <pre id="bibtex-content"></pre>
-  </div>
-</div>
-
-<script>
-  // Bibtex modal logic
-  document.querySelectorAll('.bibtex-link').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const text = link.getAttribute('data-bibtex');
-      const contentEl = document.getElementById('bibtex-content');
-      contentEl.textContent = text;
-      document.getElementById('bibtex-modal').style.display = 'flex';
-    });
-  });
-
-  document.getElementById('modal-close').addEventListener('click', () => {
-    document.getElementById('bibtex-modal').style.display = 'none';
-  });
-
-  // Close modal when clicking outside content
-  document.getElementById('bibtex-modal').addEventListener('click', e => {
-    if (e.target === e.currentTarget) {
-      e.currentTarget.style.display = 'none';
-    }
-  });
-</script>
-
-</body>
-</html>
+      </
