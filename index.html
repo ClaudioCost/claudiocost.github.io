@@ -5,281 +5,192 @@
   <title>Claudio Costanzo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Claudio Costanzo — economist. PhD in Economics (ECARES, Université libre de Bruxelles). Research in labour and demographic economics and behavioural economics.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect width='32' height='32' rx='6' fill='%237a2e33'/><text x='16' y='22' font-size='15' font-family='Georgia,serif' fill='%23ffffff' text-anchor='middle'>CC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent: #0066cc;
-      --text: #333333;
+      --sans: 'Inter', -apple-system, "Segoe UI", Roboto, sans-serif;
+      --serif: 'Source Serif 4', Georgia, "Times New Roman", serif;
+      --head: var(--serif);
+      --ink: #1b1c1e;
+      --muted: #565b63;
+      --faint: #8a8f97;
+      --accent: #7a2e33;
+      --accent-dark: #5c1f24;
+      --rule: #e8e8e8;
       --bg: #ffffff;
-      --light: #f8f8f8;
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 0 28px; }
 
+    /* Header */
     header {
-      background: var(--light);
-      border-bottom: 1px solid #e0e0e0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(6px);
+      border-bottom: 1px solid var(--rule);
     }
+    .nav { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1rem; padding: .95rem 0; }
+    .brand { font-family: var(--head); font-weight: 600; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+    .menu { display: flex; gap: 1.6rem; list-style: none; }
+    .menu a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; }
+    .menu a:hover, .menu a:focus { color: var(--accent); }
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem 0;
+    /* Content links */
+    .body a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(122,46,51,.35); text-underline-offset: 2px; }
+    .body a:hover { color: var(--accent-dark); text-decoration-color: var(--accent); }
+
+    /* Hero */
+    .hero { display: flex; gap: 2.2rem; align-items: flex-start; padding: 3.2rem 0 2.6rem; }
+    .hero img { width: 156px; height: auto; border-radius: 5px; border: 1px solid var(--rule); flex: 0 0 auto; }
+    h1 { font-family: var(--head); font-size: 2.4rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.12; margin-bottom: .7rem; }
+    .affil { color: var(--muted); font-size: 1.02rem; margin-bottom: .35rem; }
+    .cv { display: inline-block; margin-top: .9rem; font-size: .9rem; font-weight: 500; color: var(--ink); text-decoration: none; border: 1px solid var(--rule); border-radius: 5px; padding: .42rem .85rem; font-family: var(--sans); }
+    .cv:hover, .cv:focus { border-color: var(--accent); color: var(--accent); }
+
+    .meta { margin-top: 1.4rem; display: grid; gap: .55rem; }
+    .meta .row { display: flex; gap: .7rem; flex-wrap: wrap; align-items: baseline; }
+    .tag-label { font-size: .7rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--faint); flex: 0 0 auto; min-width: 108px; font-family: var(--sans); }
+    .tag-vals { color: var(--ink); font-size: .95rem; }
+
+    /* Sections */
+    section { border-top: 1px solid var(--rule); padding: 2.6rem 0; }
+    h2 { font-family: var(--head); font-size: 1.6rem; font-weight: 600; margin-bottom: 1.3rem; }
+    .group { font-size: .73rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--faint); margin: 1.7rem 0 .7rem; font-family: var(--sans); }
+    .group:first-of-type { margin-top: 0; }
+
+    .item { margin-bottom: 1.15rem; }
+    .p-title { font-family: var(--head); font-weight: 600; font-size: 1.16rem; color: var(--ink); line-height: 1.35; }
+    .p-meta { color: var(--muted); font-size: .92rem; margin-top: .12rem; }
+    .p-desc { color: var(--muted); font-size: .93rem; margin-top: .35rem; }
+    .p-links { font-size: .87rem; margin-top: .34rem; }
+    .p-links a { color: var(--accent); text-decoration: none; }
+    .p-links a:hover, .p-links a:focus { text-decoration: underline; text-underline-offset: 2px; }
+    .p-links .sep { color: var(--faint); margin: 0 .5rem; }
+    .prize { font-size: .9rem; margin-top: .3rem; color: var(--ink); }
+    .prize .star { color: #b8860b; }
+
+    /* Contact */
+    .contact-line { margin-bottom: .7rem; display: flex; gap: .7rem; flex-wrap: wrap; align-items: baseline; }
+    .contact-line .tag-label { min-width: 66px; }
+    .social { width: 22px; height: 22px; fill: var(--muted); vertical-align: middle; }
+    a:hover .social, a:focus .social { fill: var(--accent); }
+
+    footer { border-top: 1px solid var(--rule); padding: 1.8rem 0 2.4rem; color: var(--faint); font-size: .82rem; }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .hero { flex-direction: column; gap: 1.4rem; padding-top: 2.4rem; }
+      .hero img { width: 130px; }
+      h1 { font-size: 2.05rem; }
+      .tag-label { min-width: 0; flex-basis: 100%; }
     }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav a.logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    nav ul li a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a:focus {
-      color: var(--accent);
-    }
-
-    section {
-      padding: 2rem 0;
-    }
-
-    h1, h2 {
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
-
-    .about {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .about-content {
-      flex: 1 1 60%;
-    }
-
-    .about-img {
-      max-width: 180px;
-      flex: 0 0 180px;
-    }
-
-    .about-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .pub-item, .teach-item {
-      margin-bottom: 1.25rem;
-    }
-
-    .pub-item span {
-      display: block;
-    }
-
-    .pub-title {
-      font-weight: 600;
-    }
-
-    .pub-authors,
-    .pub-venue {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    footer {
-      background: var(--light);
-      padding: 2rem 0;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    @media (max-width: 600px) {
-      .about-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav ul {
-        flex-basis: 100%;
-        justify-content: flex-start;
-      }
-    }
-
-    .social-icon { width: 24px; height: 24px; fill: var(--text); transition: fill 0.2s ease; }
-    a:hover .social-icon { fill: var(--accent); }
-    h3 { margin: 1rem 0 .5rem; font-size: 1.2rem; font-weight: 600; }
-    .subhead { font-weight: 600; font-size: 1.1rem; margin: 0.5rem 0 0.3rem 0; }
   </style>
 </head>
 <body>
-
 <header>
-  <div class="container">
-    <nav>
-      <a href="#top" class="logo">Claudio Costanzo</a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="wrap nav">
+    <a href="#top" class="brand">Claudio Costanzo</a>
+    <ul class="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </header>
 
-<main id="top">
-  <!-- About Section -->
-  <section id="about">
-    <div class="container about">
-      <div class="about-wrapper">
-        <img src="assets/profile.jpg" alt="Claudio Costanzo" class="about-img">
-        <div class="about-content">
-          <h1>Claudio Costanzo</h1>
-          <p>Grantholder at <a href="https://knowledge4policy.ec.europa.eu/behavioural-insights/team_en">Competence Centre on Behavioural Insights</a>, Joint Research Center.</p>
-          <p>PhD in Economics, European Center for Advanced Research in Economics and Statistics (<a href="https://ecares.ulb.be/">ECARES</a>), Université libre de Bruxelles.</p>
-          <p><a href="assets/Claudio_Costanzo_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></p>
-          <p class="subhead">Research fields</p>
-          <ul>
-            <li>Labour and demographic economics</li>
-            <li>Behavioural economics</li>
-          </ul>
-          <p class="subhead">Methodologies</p>
-          <ul>
-            <li>Structural modeling</li>
-            <li>Experimental and quasi-experimental methods</li>
-          </ul>
+<main id="top" class="body">
+  <!-- About -->
+  <section id="about" style="border-top:none;padding-top:0;">
+    <div class="wrap hero">
+      <img src="assets/profile.jpg" alt="Claudio Costanzo">
+      <div>
+        <h1>Claudio Costanzo</h1>
+        <p class="affil">Grantholder, <a href="https://knowledge4policy.ec.europa.eu/behavioural-insights/team_en">Competence Centre on Behavioural Insights</a>, Joint Research Center.</p>
+        <p class="affil">PhD in Economics, <a href="https://ecares.ulb.be/">ECARES</a>, Université libre de Bruxelles.</p>
+        <a class="cv" href="assets/Claudio_Costanzo_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <div class="meta">
+          <div class="row"><span class="tag-label">Research fields</span><span class="tag-vals">Labour and demographic economics · Behavioural economics</span></div>
+          <div class="row"><span class="tag-label">Methodologies</span><span class="tag-vals">Structural modeling · Experimental &amp; quasi-experimental methods</span></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Research -->
   <section id="research">
-    <div class="container">
+    <div class="wrap">
       <h2>Research</h2>
 
-      <h3>JMP</h3>
-      <div class="pub-item">
-        <span class="pub-title">Industrial Automation and Intra-Household Labor Supply</span>
-        <span><a href="assets/Industrial_Automation_and_Intra_Household_Labor_Supply.pdf" target="_blank" rel="noopener">PDF</a></span>
+      <div class="group">Job Market Paper</div>
+      <div class="item">
+        <div class="p-title">Industrial Automation and Intra-Household Labor Supply</div>
+        <div class="p-links"><a href="assets/Industrial_Automation_and_Intra_Household_Labor_Supply.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
 
-      <h3>Publications</h3>
-      <div class="pub-item">
-        <span class="pub-title">Robots, Jobs, and Optimal Fertility Timing</span>
-        <span class="pub-authors">Claudio Costanzo (2025)</span>
-        <span class="pub-venue">Journal of Population Economics 38, 51</span>
-        <span class="pub-venue">Winner of <a href="https://glabor.org/2026-kuznets-prize-awarded-to-robots-jobs-and-optimal-fertility-timing/">Kuznets Prize 2026 for best paper in J Popul Econ</a></span>
-        <span><a href="https://link.springer.com/epdf/10.1007/s00148-025-01105-3?sharing_token=9Kv3uMZWp4pMW4VoxdK75ve4RwlQNchNByi7wbcMAY4njFQaN0pCeFY2aP04uHZs9FhcmAAqU1rQg7a_73JxkZEQuJhUn1ONWW08CxgABO8TMoHHtBfhyMdTRhE2Aud5KwnE1FW6ZapEk2Nea5gorS4LIv3ShVkOAVFyr6lfoBY%3D">Pub version</a> | <a href="assets/Robots__Jobs__and_Optimal_Fertility_Timing.pdf" target="_blank" rel="noopener">PDF</a> | <a href="https://doi.org/10.1007/s00148-025-01105-3">DOI</a></span>
+      <div class="group">Publications</div>
+      <div class="item">
+        <div class="p-title">Robots, Jobs, and Optimal Fertility Timing</div>
+        <div class="p-meta">Claudio Costanzo (2025) · Journal of Population Economics 38, 51</div>
+        <div class="prize"><span class="star">★</span> Winner, <a href="https://glabor.org/2026-kuznets-prize-awarded-to-robots-jobs-and-optimal-fertility-timing/">Kuznets Prize 2026</a> — best paper in <em>J. Popul. Econ.</em></div>
+        <div class="p-links"><a href="https://link.springer.com/epdf/10.1007/s00148-025-01105-3?sharing_token=9Kv3uMZWp4pMW4VoxdK75ve4RwlQNchNByi7wbcMAY4njFQaN0pCeFY2aP04uHZs9FhcmAAqU1rQg7a_73JxkZEQuJhUn1ONWW08CxgABO8TMoHHtBfhyMdTRhE2Aud5KwnE1FW6ZapEk2Nea5gorS4LIv3ShVkOAVFyr6lfoBY%3D" target="_blank" rel="noopener">Published version</a><span class="sep">·</span><a href="assets/Robots__Jobs__and_Optimal_Fertility_Timing.pdf" target="_blank" rel="noopener">PDF</a><span class="sep">·</span><a href="https://doi.org/10.1007/s00148-025-01105-3">DOI</a></div>
       </div>
 
-      <h3>Working papers</h3>
-      <div class="pub-item">
-        <span class="pub-title">AI, Earnings Risk, and the Marriage Market</span>
+      <div class="group">Working Papers</div>
+      <div class="item">
+        <div class="p-title">AI, Earnings Risk, and the Marriage Market</div>
       </div>
 
-      <h3>Work in progress</h3>
-      <div class="pub-item">
-        <span class="pub-title">Project: AI, the Market for News, and Polarization</span>
-        <span class="pub-authors">w/ A. Blasco, M. Scharfbillig, L. Stoetzer</span>
-        <p style="font-size: 0.95rem; margin-top: 0.5rem;">A large-scale field experiment on how Generative AI reshapes the market for news: analyzing persuasion on the supply side and belief polarization on the demand side.</p>
+      <div class="group">Work in Progress</div>
+      <div class="item">
+        <div class="p-title">AI, the Market for News, and Polarization</div>
+        <div class="p-meta">with A. Blasco, M. Scharfbillig, L. Stoetzer</div>
+        <div class="p-desc">A large-scale field experiment on how generative AI reshapes the market for news: persuasion on the supply side and belief polarization on the demand side.</div>
       </div>
-      <div class="pub-item">
-        <span class="pub-title">Does Artificial Intelligence Displace Young Workers?</span>
+      <div class="item">
+        <div class="p-title">Does Artificial Intelligence Displace Young Workers?</div>
       </div>
     </div>
   </section>
 
-  <!-- Teaching Section -->
+  <!-- Teaching -->
   <section id="teaching">
-    <div class="container">
+    <div class="wrap">
       <h2>Teaching</h2>
-      <div class="teach-item">
-        <strong>TA Graduate Econometrics II</strong>, ULB (2021&nbsp;–&nbsp;2025)
+      <div class="item">
+        <div class="p-title">TA · Graduate Econometrics II</div>
+        <div class="p-meta">Université libre de Bruxelles (2021–2025)</div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
-    <div class="container">
+    <div class="wrap">
       <h2>Contact</h2>
-      <p>
-        Joint Research Center, Rue du Champ de Mars 21 (Office 04/053), 1050 Bruxelles, Belgium
-      </p>
-      <p>
-        Email:
-        <a href="mailto:claudio.costanzo@ulb.be">claudio.costanzo@ulb.be</a>,
-        <a href="mailto:claudio.costanzo@ec.europa.eu">claudio.costanzo@ec.europa.eu</a>
-      </p>
-      <p style="margin-top: 1em;">
-        Links:
-        <a href="https://be.linkedin.com/in/claudio-costanzo-353939100/en" aria-label="LinkedIn">
-          <svg class="social-icon" role="img" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554V14.89c0-1.327-.027-3.037-1.851-3.037-1.851 0-2.135 1.445-2.135 2.94v5.659H9.353V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.372-1.85 3.605 0 4.272 2.372 4.272 5.455v6.286zM5.337 7.433c-1.144 0-2.067-.927-2.067-2.068 0-1.142.923-2.067 2.067-2.067s2.067.925 2.067 2.067c0 1.141-.923 2.068-2.067 2.068zM6.756 20.452H3.919V9h2.837v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.73v20.541C0 23.226.792 24 1.771 24h20.451C23.198 24 24 23.226 24 22.271V1.729C24 .774 23.198 0 22.225 0z"/>
-          </svg>
-        </a>
-      </p>
+      <div class="contact-line"><span class="tag-label">Office</span><span>Joint Research Center, Rue du Champ de Mars 21 (Office 04/053), 1050 Bruxelles, Belgium</span></div>
+      <div class="contact-line"><span class="tag-label">Email</span><span><a href="mailto:claudio.costanzo@ulb.be">claudio.costanzo@ulb.be</a>, <a href="mailto:claudio.costanzo@ec.europa.eu">claudio.costanzo@ec.europa.eu</a></span></div>
+      <div class="contact-line"><span class="tag-label">Links</span>
+        <span><a href="https://be.linkedin.com/in/claudio-costanzo-353939100/en" aria-label="LinkedIn"><svg class="social" role="img" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554V14.89c0-1.327-.027-3.037-1.851-3.037-1.851 0-2.135 1.445-2.135 2.94v5.659H9.353V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.372-1.85 3.605 0 4.272 2.372 4.272 5.455v6.286zM5.337 7.433c-1.144 0-2.067-.927-2.067-2.068 0-1.142.923-2.067 2.067-2.067s2.067.925 2.067 2.067c0 1.141-.923 2.068-2.067 2.068zM6.756 20.452H3.919V9h2.837v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.73v20.541C0 23.226.792 24 1.771 24h20.451C23.198 24 24 23.226 24 22.271V1.729C24 .774 23.198 0 22.225 0z"/></svg></a></span>
+      </div>
     </div>
   </section>
 </main>
 
-
 <footer>
-  <div class="container">
-    © Claudio Costanzo. This website was built with HTML/CSS and hosted on GitHub Pages.
-  </div>
+  <div class="wrap">© 2026 Claudio Costanzo</div>
 </footer>
-
 </body>
 </html>
